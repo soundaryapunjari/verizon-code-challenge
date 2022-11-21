@@ -1,0 +1,54 @@
+
+<!-- Sidebar -->
+<div class="sidebar light-grey bar-block" style="width:15%" *ngIf="isMenu">
+  <div style="padding-top: 30px !important;">
+    <div class="item " [ngClass]="router.url === '/' ? 'item-active' : ''">
+  <a  class="bar-item button" [ngClass]="router.url === '/' ? 'item-active' : ''" (click)="onMenuItem('')">
+    <i class="fa fa-home"></i>
+    <span class="menu-item">Home</span>
+  </a>
+    </div>
+
+    <div class="item " [ngClass]="router.url === '/services' ? 'item-active' : ''">
+
+    <a class="item bar-item button" [ngClass]="router.url === '/services' ? 'item-active' : ''" (click)="onMenuItem('services')">
+    <i class="fa fa-bars"></i>
+    <span class="menu-item">Services</span></a>
+    </div>
+
+    <div class="item " [ngClass]="router.url === '/apis' ? 'item-active' : ''">
+
+    <a class="item bar-item button" (click)="onMenuItem('apis')">
+    <i class="fa fa-puzzle-piece"></i>
+    <span class="menu-item">My API's</span></a>
+    </div>
+
+    <div class="item " [ngClass]="router.url === '/monitor' ? 'item-active' : ''">
+
+    <a class="item bar-item button" (click)="onMenuItem('monitor')">
+    <i class="fa fa-search-plus"></i>
+    <span class="menu-item">Monitoring</span>
+    </a>
+    </div>
+
+    <div class="item footer-item" [ngClass]="router.url === '/logout' ? 'item-active' : ''">
+
+    <a class="item bar-item button" (click)="onMenuItem('/')">
+    <i class="fa fa-sign-out"></i>
+    <span class="menu-item">Logout</span>
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Page Content -->
+<div [style.margin-left]="isMenu ? '15%' : '0%'">
+  <div class="sub-header" *ngIf="router.url === '/'">
+    <p>{{currentDate | date : 'fullDate'}}</p>
+    <h1>Home</h1>
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>

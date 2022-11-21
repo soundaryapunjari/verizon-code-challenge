@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="column" (mouseover)="mouseHoverIn(1)" (mouseleave)="mouseHoverOut()">
+    <div class="card" [ngClass]="(isActive && selectedCard === 1)  ? 'card-active' : '' ">
+        <i class="fa fa-list fa-4x card-icon" aria-hidden="true" [ngClass]="(isActive && selectedCard === 1)  ? 'card-active' : '' "></i>
+<h2 class="card-title" [ngClass]="(isActive && selectedCard === 1)  ? 'card-active' : '' ">IDE</h2>
+      <span class="card-title" [ngClass]="(isActive && selectedCard === 1)  ? 'card-active' : '' ">write your automated test</span>
+      </div>
+  </div>
+
+  <div class="column" (mouseover)="mouseHoverIn(2)" (mouseleave)="mouseHoverOut()">
+    <div class="card" [ngClass]="(isActive && selectedCard === 2) ? 'card-active' : '' ">
+      <i class="fa fa-calendar fa-4x card-icon" aria-hidden="true" [ngClass]="(isActive && selectedCard === 2)  ? 'card-active' : '' "></i>
+      <h2 class="card-title" [ngClass]="(isActive && selectedCard === 2)  ? 'card-active' : '' ">Job Scheduling</h2>
+      <span class="card-title" [ngClass]="(isActive && selectedCard === 2)  ? 'card-active' : '' ">schedule recurring test jobs</span>
+    </div>
+  </div>
+
+  <div class="column" (mouseover)="mouseHoverIn(3)" (mouseleave)="mouseHoverOut()">
+    <div class="card" [ngClass]="(isActive && selectedCard === 3)  ? 'card-active' : '' ">
+      <img class="card-icon" [ngClass]="(isActive && selectedCard === 3)  ? 'card-active' : '' " style="height: 80px;width: 80px" src="assets/images/req.png">
+      <h2 class="card-title" [ngClass]="(isActive && selectedCard === 3)  ? 'card-active' : '' ">Requirement Management</h2>
+    </div>
+  </div>
+
+
+  <div class="column" (mouseover)="mouseHoverIn(4)" (mouseleave)="mouseHoverOut()">
+    <div class="card" [ngClass]="(isActive && selectedCard === 4)  ? 'card-active' : '' ">
+<img class="card-icon" style="height: 80px;width: 80px" src="assets/images/spam.png">
+      <h2 class="card-title" [ngClass]="(isActive && selectedCard === 4)  ? 'card-active' : '' ">Defect Management</h2>
+      <span class="card-title" [ngClass]="(isActive && selectedCard === 4)  ? 'card-active' : '' ">Open issues in Jira</span>
+
+    </div>
+  </div>
+
+  <div  class="footer-item">
+    <div >
+      <span>Copyright all reserved </span>
+      <span><i class="fa fa-copyright"></i> 2022 Verizon</span>
+
+    </div>
+  </div>
+
+</div>
